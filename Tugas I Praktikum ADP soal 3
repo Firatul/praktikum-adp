@@ -1,0 +1,21 @@
+Program Menghitung_Luas_Permukaan_Balok;
+uses crt;
+var
+  panjang,lebar,tinggi,luaspermukaaan: real;
+begin
+clrscr;
+  writeln('Tugas Modul I, Menghitung Luas Permukaan Balok');
+  writeln('Nama : Safiratul Hasanah');
+  writeln('NIM : 2310432008');
+  writeln('Shift :I');
+  writeln();
+  write('panjang :');
+  readln(panjang);
+  write('lebar :');
+  readln(lebar);
+  write('tinggi :');
+  readln(tinggi);
+  luaspermukaan:=2*((panjang*lebar)+(panjang*tinggi)+(lebar*tinggi));
+  writeln('Luas permukaan =',luaspermukaan:5:2);
+  readln;
+end.
