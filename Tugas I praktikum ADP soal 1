@@ -1,0 +1,26 @@
+Repository untuk mengelola praktikum ADP 2024
+
+Nama : Safiratul Hasanah
+NIM : 2310432008
+Shift : I
+
+Program Perkalian_sederhana;
+uses crt;
+var
+  angka1,angka2,perkalian: real;
+begin
+clrscr;
+  writeln('Tugas Modul I membuat program perkalian sederhana');
+  writeln('Nama : Safiratul Hasanah');
+  writeln('NIM : 2310432008');
+  writeln('Shift : I');
+  writeln();
+  write('angka1 :');
+  readln(angka1);
+  write('angka2 :');
+  readln(angka2);
+  perkalian:=angka1*angka2;
+  writeln('perkalian=',perkalian:5:2);
+  readln;
+end.
+  
