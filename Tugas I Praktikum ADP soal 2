@@ -1,0 +1,23 @@
+repository untuk mengelola praktikum adp 2024
+
+Nama : Safiratul Hasanah
+NIM : 2310432008
+Shift : I
+
+Program Menghitung_volume_bola;
+uses crt;
+var
+  jari,volume: real;
+begin
+clrscr;
+  writeln('Tugas Modul I, Mengitung Volume Bola');
+  writeln('Nama : Safiratul Hasanah');
+  writeln('NIM : 2310432008');
+  writeln('Shift : I');
+  writeln();
+  Write('jari :');
+  readln(jari);
+  volume:=4/3*3.14*jari*jari;
+  writeln('Volume=',volume);
+  readln;
+end.
