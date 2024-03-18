@@ -1,0 +1,78 @@
+# Daftar Menu Makanan dan Minuman
+menu_makanan = {
+    "Jajangmyeon":30000,
+    "Kimchi":22000,
+    "Japchae":25000,
+    "Bulgogi":29000,
+    "Ramyeon":32000,
+}
+menu_minuman ={
+    "Milkshake Coklat":20000,
+    "Banana Milk":18000,
+    "Olatte":17000,
+    "Mango Float":20000,
+    "Le Mineral":10000,
+}
+
+print('Nama : Safiratul Hasanah')
+print('NIM : 2310432008')
+print('Shift : 1')
+print('## TUGAS MODUL 2, PROGRAM MENU RESTORAN ##')
+print('..........................................')
+print('')
+print('SEOUL RESTAURANT')
+print('================')
+
+# Input Jenis Pesanan
+jenis_pesanan = int(input("Masukkan Jenis pesanan (1: Makanan, 2: Minuman, 3: Makanan dan Minuman) :"))
+
+# Proses Pesanan
+if jenis_pesanan == 1:
+    print("Daftar Menu Makanan :")
+    for makanan, harga in menu_makanan.items():
+        print(f"{makanan}: Rp {harga}")
+    pesanan = input ("Pilih makanan yang diinginkan : ")
+    if pesanan in menu_makanan:
+        jumlah = int(input("Masukkan jumlah pesanan : "))
+        total_harga = menu_makanan[pesanan] * jumlah
+        print(f"pesanan: {pesanan}({jumlah} porsi)")
+        print(f"Total Harga : Rp {total_harga}")
+    else:
+        print("Menu tidak Valid.")
+elif jenis_pesanan == 2:
+    print("Daftar Menu Minuman :")
+    for minuman, harga in menu_minuman.items():
+        print(f"{minuman}: Rp {harga}")
+    pesanan = input ("Pilih minuman yang diinginkan : ")
+    if pesanan in menu_minuman:
+        jumlah = int(input("Masukkan jumlah pesanan : "))
+        total_harga = menu_minuman[pesanan] * jumlah
+        print(f"pesanan: {pesanan}({jumlah} porsi)")
+        print(f"Total Harga : Rp {total_harga}")
+    else:
+        print("Menu tidak Valid.")
+elif jenis_pesanan == 3:
+    print("Daftar Menu Makanan :")
+    for makanan, harga in menu_makanan.items():
+        print(f"{makanan}: Rp {harga}")
+    pesanan_makanan = input("Pilih makanan yang diinginkan: ")
+    if pesanan_makanan in menu_makanan:
+        jumlah_makanan = int(input("Masukkan jumlah pesanan makanan: "))
+        print("Daftar Menu Minuman:")
+        for minuman, harga in menu_minuman.items():
+            print(f"{minuman}: Rp {harga}")
+        pesanan_minuman = input("Pilih minuman yang diinginkan: ")
+        if pesanan_minuman in menu_minuman:
+            jumlah_minuman = int(input("Masukkan jumlah pesanan minuman: "))
+            total_harga_makanan = menu_makanan[pesanan_makanan] * jumlah_makanan
+            total_harga_minuman = menu_minuman[pesanan_minuman] * jumlah_minuman
+            total_harga = total_harga_makanan + total_harga_minuman
+            print(f"Pesanan Makanan: {pesanan_makanan} ({jumlah_makanan} porsi)")
+            print(f"Pesanan Minuman: {pesanan_minuman} ({jumlah_minuman} gelas)")
+            print(f"Total Harga: Rp {total_harga}")
+        else:
+            print("Menu minuman tidak valid.")
+    else:
+        print("Menu makanan tidak valid.")
+else:
+    print("Kode pesanan tidak valid.")
